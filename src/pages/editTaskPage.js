@@ -71,7 +71,7 @@ const [isSaving,setIsSaving]=useState(false)
     }
     setIsSaving(true)
     const workout = {title, load ,dateTime:dateTime.toString()}
-    const response = await fetch('/api/workouts/' + task._id, {
+    const response = await fetch('https://taskbuddy-1aez.onrender.com/api/workouts/' + task._id, {
     
         method: 'PATCH',
       body: JSON.stringify(workout),

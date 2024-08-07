@@ -11,7 +11,7 @@ const SearchPage = () => {
   const  handleSearch = async () => {
     setIsSearching(true)
     const workout = {title:query}
-    const response = await fetch('/api/workouts/search/task', {
+    const response = await fetch('https://taskbuddy-1aez.onrender.com/api/workouts/search/task', {
       method: 'POST',
       body: JSON.stringify(workout),
       headers: {

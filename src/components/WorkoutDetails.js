@@ -29,7 +29,7 @@ const WorkoutDetails = ({ workout }) => {
             navigate('/edit/task', { state: { task: workout } });
             break;
           case 'Delete':
-            const responseDelete = await fetch('/api/workouts/' + workout._id, {
+            const responseDelete = await fetch('https://taskbuddy-1aez.onrender.com/api/workouts/' + workout._id, {
               method: 'DELETE',
             });
             const jsonDelete = await responseDelete.json();
@@ -38,7 +38,7 @@ const WorkoutDetails = ({ workout }) => {
             }
             break;
           case 'Update':
-            const responseMark = await fetch('/api/workouts/markascompleted/' + workout._id, {
+            const responseMark = await fetch('https://taskbuddy-1aez.onrender.com/api/workouts/markascompleted/' + workout._id, {
               method: 'PATCH',
               headers: {
                 'Content-Type': 'application/json',

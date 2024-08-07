@@ -4,7 +4,7 @@ const TaskUncompleted = () => {
   const [taskCompleted ,setTaskcompleted]=useState([])
   useEffect(() => {
     const fetchWorkouts = async () => {
-      const response = await fetch('/api/workouts/task/uncompleted')
+      const response = await fetch('https://taskbuddy-1aez.onrender.com/api/workouts/task/uncompleted')
       const json = await response.json()
       if (response.ok) {
         setTaskcompleted(json)

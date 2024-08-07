@@ -1,5 +1,4 @@
 {
-  "proxy": "https://taskbuddy-1aez.onrender.com",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,

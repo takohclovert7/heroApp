@@ -4,7 +4,7 @@ const TaskCompleted = () => {
   const [taskCompleted ,setTaskcompleted]=useState([])
   useEffect(() => {
     const fetchWorkouts = async () => {
-      const response = await fetch('/api/workouts/task/completed')
+      const response = await fetch('https://taskbuddy-1aez.onrender.com/api/workouts/task/completed')
       const json = await response.json()
       if (response.ok) {
         setTaskcompleted(json)

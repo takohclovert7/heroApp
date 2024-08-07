@@ -36,7 +36,7 @@ const WorkoutForm = () => {
     setIsAdding(true)
     const workout = {title, load ,dateTime:dateTime.toString()}
     console.log({dateTimeValue})
-    const response = await fetch('/api/workouts', {
+    const response = await fetch('https://taskbuddy-1aez.onrender.com/api/workouts', {
       method: 'POST',
       body: JSON.stringify(workout),
       headers: {

@@ -7,7 +7,7 @@ const TaskcompletedDetails = ({ workout }) => {
 
   const handleClick = async () => {
     setIsDeleting(true)
-    const response = await fetch('/api/workouts/' + workout._id, {
+    const response = await fetch('https://taskbuddy-1aez.onrender.com/api/workouts/' + workout._id, {
       method: 'DELETE'
     })
     if (response.ok) {
