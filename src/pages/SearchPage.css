@@ -1,0 +1,109 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+  
+  }
+  
+  h2 {
+    margin: 10px 0;
+    font-size: 1.5rem; /* Default font size */
+  }
+  
+  .search-container {
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    margin-top: 10px;
+  }
+  
+  .search-box-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+   
+  }
+  
+  .search-box {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding-left: 40px; /* Space for the search icon */
+    padding-right: 60px; /* Space for the search button */
+    height: 45px;
+  }
+  
+  .search-icon, .search-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .search-icon {
+    left: 10px;
+    color: #aaa;
+  }
+
+  .search-button:hover,  .search-button:active{
+    background-color: lightgreen;
+  
+  }
+  .search-button {
+    font-family: "Poppins";
+    color: #fff;
+    right: 0px;
+    border-radius: 4px;
+    top: 42%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color:#1aac83;;
+    cursor: pointer;
+    padding: 0; /* Remove padding */
+    width: 80px; /* Fixed width for the button */
+    height: 45px;
+    font-weight:bolder ;
+  }
+  
+  .results-container {
+    width: 100%;
+    margin-top: 20px;
+   
+  }
+  
+  .result-item {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    width: 100%;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    h2 {
+      font-size: 1.2rem; /* Smaller font size for mobile */
+    }
+    .container{
+        padding: 15px 0px 20px 0px;
+    }
+    .search-container {
+      width: 100%;
+    }
+  
+    .search-box {
+      width: calc(100% - 80px); /* Adjust width to fit the button */
+    }
+  
+    .search-button {
+      width: 80px; /* Fixed width for the button */
+      font-size: 0.9rem; /* Adjust font size for the button */
+    }
+  }
+  

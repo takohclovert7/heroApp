@@ -1,0 +1,81 @@
+/* Navbar.css */
+
+.navbar {
+    background-color: #ffffff;
+    padding: 1rem 1rem;
+    position: relative;
+    margin-top: 10px; /* Adjust this value to move the navbar down */
+   
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-logo {
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  
+  .navbar-toggler {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-weight: bolder;
+  }
+  
+  /* Menu Styles */
+  .navbar-menu {
+    display: flex;
+    gap: 1rem;
+    
+
+  }
+  
+  .navbar-item {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  
+  .navbar-item:hover {
+    text-decoration:3px underline green;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px; /* Adjust this value as needed */
+      right: 0;
+      background-color: lightgreen;
+      width: 100%;
+      padding: 1rem;
+      z-index: 1000;
+      align-items: flex-end;
+     
+    }
+  
+    .navbar-menu.active {
+      display: flex;
+    }
+  
+    .navbar-item {
+      padding: 0.5rem 1rem;
+      text-align: center;
+      /* color: white; */
+    }
+  
+    .navbar-toggler {
+      display: block;
+    }
+  
+  }
+  
