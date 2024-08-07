@@ -7,6 +7,7 @@ import EditWorkoutForm from "./pages/editTaskPage"
 import TaskUncompleted from "./pages/taskUncompleted"
 import About from './pages/about'
 import SearchPage from './pages/search'
+
 const App = () => {
   const appStyle = {
     display: 'flex',
@@ -26,6 +27,24 @@ const App = () => {
     textAlign: 'center',
   };
 
+  const footerNavStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    listStyleType: 'none',
+    padding: 0,
+    margin: '10px 0 0 0',
+  };
+
+  const footerLinkStyle = {
+    margin: '5px 10px',
+    backgroundColor:"#333",border:'none' ,color:"white"
+  };
+
+  const footerAnchorStyle = {
+    color: '#fff',
+    textDecoration: 'none',
+  };
+
   return (
     <Router>
       <div style={appStyle}>
@@ -43,21 +62,36 @@ const App = () => {
         <footer style={footerStyle}>
           <p style={{color:"white"}}>&copy; 2024 Task Buddy. All rights reserved.</p>
           <nav>
-            <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
-            <li style={{ display: 'inline', margin: '0 10px', backgroundColor:"#333",border:'none' ,color:"white"}}>
-                <a href="/task/uncompleted" style={{ color: '#fff', textDecoration: 'none' }}>Task uncompleted</a>
+            <ul style={footerNavStyle}>
+              <li style={footerLinkStyle}>
+                <a href="/task/uncompleted" style={footerAnchorStyle}>Task uncompleted</a>
               </li>
-              <li style={{ display: 'inline', margin: '0 10px' ,backgroundColor:"#333",border:'none' ,color:"white"}}>
-                <a href="#about" style={{ color: '#fff', textDecoration: 'none' }}>About</a>
+              <li style={footerLinkStyle}>
+                <a href="/about" style={footerAnchorStyle}>About</a>
               </li>
-             
-              <li style={{ display: 'inline', margin: '0 10px',backgroundColor:"#333",border:'none' ,color:"white" }}>
-                <a href="/task/completed" style={{ color: '#fff', textDecoration: 'none' }}>Task completed</a>
+              <li style={footerLinkStyle}>
+                <a href="/task/completed" style={footerAnchorStyle}>Task completed</a>
+              </li>
+              <li style={footerLinkStyle}>
+                <a href="/search/task" style={footerAnchorStyle}>Search Task</a>
               </li>
             </ul>
           </nav>
         </footer>
       </div>
+      <style>
+        {`
+          @media (max-width: 600px) {
+            ul {
+              flex-direction: column;
+              align-items: center;
+            }
+            li {
+              margin: 10px 0;
+            }
+          }
+        `}
+      </style>
     </Router>
   );
 };
