@@ -143,7 +143,7 @@ div.error {
   font-size: 16px; /* Increase font size */
   cursor: pointer; /* Add a pointer cursor on hover */
   background-color:white;
-  width: 190px;
+  width: 40px;
   text-align: right;
   padding-right: 0%;
 }
@@ -154,10 +154,10 @@ div.error {
 .dropdown-content {
   display: none; /* Hide the dropdown by default */
   position: absolute; /* Position the dropdown */
-  left: 0; /* Align the dropdown to the left of the button */
+  right: 0%; /* Align the dropdown to the left of the button */
   top: 60%; /* Position the dropdown below the button */
   background-color: #f9f9f9; /* Light background color */
-  min-width: 100px; /* Set a minimum width */
+  min-width: 190px; /* Set a minimum width */
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Add shadow */
   z-index: 1; /* Ensure dropdown is on top */
   transition: opacity 0.3s ease, transform 0.3s ease; /* Add transition for sliding effect */

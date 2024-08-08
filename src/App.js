@@ -60,7 +60,6 @@ const App = () => {
           </Routes>
         </main>
         <footer style={footerStyle}>
-          <p style={{color:"white"}}>&copy; 2024 Task Buddy. All rights reserved.</p>
           <nav>
             <ul style={footerNavStyle}>
               <li style={footerLinkStyle}>
@@ -77,6 +76,7 @@ const App = () => {
               </li>
             </ul>
           </nav>
+          <p style={{color:"white"}}>&copy; 2024 Task Buddy. All rights reserved.</p>
         </footer>
       </div>
       <style>
